@@ -1,0 +1,12 @@
+#mniCancel > .label{
+    -fx-graphic: url("/img/cancel.png");
+}
+#mniCancel .accelerator-text{
+    -fx-graphic: none;
+}
+#mniAbout > .label{
+    -fx-graphic: url("/img/information(1).png");
+}
+#mniAbout .accelerator-text{
+    -fx-graphic: none;
+}

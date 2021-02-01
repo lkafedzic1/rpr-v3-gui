@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.vjezbanje.Controller">
+   <stylesheets>
+       <URL value="@/css/glavna.css" />
+   </stylesheets>
+    <center>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu text="_File">
+                  <items>
+                    <MenuItem fx:id="mniCancel" text="_Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#actionOpen" text="_Open" />
+                        <MenuItem text="_Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem text="_New" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem onAction="#akcijaKraj" text="E_xit" />
+                  </items>
+                </Menu>
+                <Menu text="_Edit">
+                  <items>
+                    <MenuItem text="_Delete" />
+                  </items>
+                </Menu>
+                  <Menu text="_View">
+                    <items>
+                      <MenuItem text="Vie_w" />
+                    </items>
+                  </Menu>
+                <Menu text="_ Help">
+                  <items>
+                    <MenuItem fx:id="mniAbout" text="A_bout" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="tbOpen" mnemonicParsing="false" />
+                  <Button mnemonicParsing="false" onAction="#actionNewWindow" text="Button" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
